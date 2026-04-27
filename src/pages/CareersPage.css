@@ -1,0 +1,231 @@
+/* Careers Page */
+.careers-page {
+  min-height: 100vh;
+}
+
+.careers-page .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Intro Section */
+.careers-intro {
+  padding: var(--section-padding) 0;
+  background: var(--color-white);
+}
+
+.careers-intro .intro-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.careers-intro h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--color-gray-900);
+}
+
+.careers-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-gray-600);
+}
+
+/* Benefits Section */
+.careers-benefits {
+  padding: var(--section-padding) 0;
+  background: var(--color-gray-50);
+}
+
+.careers-benefits h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--color-gray-900);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: var(--color-white);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-gray-900);
+}
+
+.benefit-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-gray-600);
+}
+
+/* Job Listings */
+.job-listings {
+  padding: var(--section-padding) 0;
+  background: var(--color-white);
+}
+
+.job-listings h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-gray-900);
+}
+
+.job-listings .filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.job-listings .filter-tab {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  background: transparent;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-listings .filter-tab:hover {
+  border-color: var(--color-gray-900);
+  color: var(--color-gray-900);
+}
+
+.job-listings .filter-tab.active {
+  background: var(--color-gray-900);
+  border-color: var(--color-gray-900);
+  color: var(--color-white);
+}
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 32px;
+  background: var(--color-gray-50);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  background: var(--color-gray-100);
+}
+
+.job-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-gray-900);
+}
+
+.job-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-gray-600);
+  margin-bottom: 12px;
+}
+
+.job-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.job-meta span {
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--color-white);
+  color: var(--color-gray-600);
+}
+
+.job-department {
+  background: rgba(200, 16, 46, 0.1) !important;
+  color: var(--color-red) !important;
+}
+
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-red);
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: var(--color-red-light);
+  gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-page .container {
+    padding: 0 20px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .apply-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

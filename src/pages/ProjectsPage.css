@@ -1,0 +1,457 @@
+/* Projects Page */
+.projects-page {
+  background: var(--color-white);
+}
+
+/* Projects PageHero: remove overlay on this page */
+.projects-page .page-hero-overlay {
+  display: none;
+}
+
+/* Filters */
+.projects-filters {
+  padding: 40px 0;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-200);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 100;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-gray-500);
+  margin-bottom: 12px;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--color-gray-300);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-900);
+}
+
+.filter-pill.active {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.toggle-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-gray-300);
+  color: var(--color-gray-400);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-600);
+}
+
+.toggle-btn.active {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.results-count {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-gray-500);
+}
+
+/* Projects Grid */
+.projects-grid-section {
+  padding: 60px 0;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.projects-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.project-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects-grid.list .project-card a {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.project-image {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+
+.projects-grid.list .project-image {
+  aspect-ratio: 16/10;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.08);
+}
+
+.projects-grid-section .project-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.96);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Default (not hovered): only image + title at bottom */
+.project-card-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 85%);
+  pointer-events: none;
+}
+
+/* Hover details panel */
+.project-hover-details {
+  position: absolute;
+  inset: 0;
+  padding: 16px 16px 14px;
+  background: rgba(245, 245, 245, 0.96);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover .project-hover-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-hover-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.project-pill--red {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.project-hover-location {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(0, 0, 0, 0.72);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-hover-desc {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.74);
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-hover-foot {
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-hover-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-hover-stat {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+.project-hover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.project-hover-link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover .project-hover-link svg {
+  transform: translateX(4px);
+}
+
+.projects-page .project-content,
+.projects-page .project-meta,
+.projects-page .meta-category,
+.projects-page .project-services,
+.projects-page .service-tag,
+.projects-page .project-details,
+.projects-page .view-toggle,
+.projects-page .toggle-btn {
+  display: none;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  color: var(--color-gray-600);
+  margin-bottom: 24px;
+}
+
+.no-results button {
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--color-gray-900);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--color-gray-900);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.no-results button:hover {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Load More */
+.load-more {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: transparent;
+  border: 1px solid var(--color-gray-900);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-gray-900);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* CTA Section */
+.projects-cta {
+  padding: 120px 0;
+  background: var(--color-gray-50);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--color-gray-900);
+  margin-bottom: 16px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: var(--color-gray-600);
+  margin-bottom: 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--color-gray-900);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid var(--color-gray-900);
+  transition: all 0.3s ease;
+}
+
+.projects-page .projects-cta .cta-button {
+  /* Ensure this wins over other page-level `.cta-button` rules (some set white text). */
+  color: var(--color-gray-900) !important;
+  border-color: var(--color-gray-900) !important;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.projects-page .projects-cta .cta-button:hover {
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .featured-project a {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid-section {
+    padding: 60px 0;
+  }
+  
+  .filters-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .filter-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+  }
+  
+  .filter-pill {
+    flex-shrink: 0;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-cta {
+    padding: 80px 0;
+  }
+}

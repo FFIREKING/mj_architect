@@ -1,0 +1,74 @@
+.hscroll {
+  position: relative;
+}
+
+.hscroll-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  cursor: grab;
+  padding-bottom: 6px; /* room for hidden scrollbar */
+}
+
+.hscroll-viewport:active {
+  cursor: grabbing;
+}
+
+.hscroll-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.hscroll-track {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  padding: 0;
+}
+
+.hscroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.85);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.hscroll-arrow:hover {
+  transform: translateY(-50%) scale(1.03);
+  color: var(--color-primary);
+}
+
+.hscroll-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hscroll-arrow.left {
+  left: -18px;
+}
+
+.hscroll-arrow.right {
+  right: -18px;
+}
+
+@media (max-width: 768px) {
+  .hscroll-track {
+    gap: 16px;
+  }
+
+  .hscroll-arrow {
+    display: none;
+  }
+}
