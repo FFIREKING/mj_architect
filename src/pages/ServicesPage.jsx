@@ -12,7 +12,7 @@ const expertiseAreas = [
     title: 'Architectural Design',
     shortDesc: 'Architecture that performs—and endures',
     fullDesc:
-      'We design buildings that respond to people, place, and program. Our approach balances clarity, constructability, and long-term performance across sectors and scales.',
+      'I design buildings that respond to people, place, and program. My process balances clarity, constructability, and long-term performance across sectors and scales.',
     image: 'https://static1.gensler.com/uploads/image/76919/project-burlingame-point-2022-508x508_1659396443.jpg',
     stats: [
       { number: '100+', label: 'Projects Delivered' },
@@ -27,7 +27,7 @@ const expertiseAreas = [
     title: 'Structural Design',
     shortDesc: 'Efficient systems, resilient outcomes',
     fullDesc:
-      'We deliver structural solutions that support architectural intent, optimize materials, and prioritize safety, adaptability, and resilience.',
+      'I deliver structural solutions that support architectural intent, optimize materials, and prioritize safety, adaptability, and resilience.',
     image: 'https://static1.gensler.com/uploads/image/103629/1764116289247/project-alembic-gateway-tower-508x508.jpg',
     stats: [
       { number: '100+', label: 'Projects Supported' },
@@ -42,7 +42,7 @@ const expertiseAreas = [
     title: 'Civil Engineering Design',
     shortDesc: 'Site + infrastructure made simple',
     fullDesc:
-      'From grading and drainage to utilities and access, we design civil systems that are durable, coordinated, and aligned with permitting realities.',
+      'From grading and drainage to utilities and access, I design civil systems that are durable, coordinated, and aligned with permitting realities.',
     image: 'https://static2.gensler.com/uploads/image/78123/01_Delta_LGA_508x508_1665175427.jpg',
     stats: [
       { number: '100+', label: 'Projects Delivered' },
@@ -57,7 +57,7 @@ const expertiseAreas = [
     title: 'MEP Design',
     shortDesc: 'Systems that power comfort + efficiency',
     fullDesc:
-      'We design MEP systems that improve comfort, reduce operational cost, and integrate cleanly with architecture and structure.',
+      'I design MEP systems that improve comfort, reduce operational cost, and integrate cleanly with architecture and structure.',
     image: 'https://static2.gensler.com/uploads/image/77517/project-TK-elevator-americas-complex-2022-508x508_1661385088.jpg',
     stats: [
       { number: '100+', label: 'Projects Supported' },
@@ -72,7 +72,7 @@ const expertiseAreas = [
     title: 'Project Management',
     shortDesc: 'Clear delivery from concept to closeout',
     fullDesc:
-      'We provide disciplined project management that aligns scope, schedule, and budget—keeping teams coordinated and decisions documented.',
+      'I provide disciplined project management that aligns scope, schedule, and budget—keeping stakeholders coordinated and decisions documented.',
     image: 'https://static2.gensler.com/uploads/image/103625/1764105600513/project-chicago-fire-fc-508x508-2.jpg',
     stats: [
       { number: '100+', label: 'Projects Managed' },
@@ -118,7 +118,7 @@ export default function ServicesPage() {
     <div className="services-page">
       <PageHero 
         title="Expertise"
-        subtitle="We design change. For people. For places. For the planet."
+        subtitle="Principal-led architecture and planning for people, places, and long-term value."
         backgroundImage="/images/hero-bg.jpg"
       />
       
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                 animate={isIntroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Integrated Design Excellence
+                Principal-Led Design Excellence
               </motion.h2>
               <motion.p
                 className="intro-lead"
@@ -145,9 +145,8 @@ export default function ServicesPage() {
                 animate={isIntroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Our multidisciplinary team brings together expertise across architecture, 
-                interior design, planning, and consulting to deliver holistic solutions 
-                that exceed expectations.
+                I bring together architecture, planning, and delivery expertise to create
+                coordinated solutions that are beautiful, buildable, and performance-driven.
               </motion.p>
             </div>
             <div className="intro-stats">
@@ -193,7 +192,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Our Core Expertise
+            Core Services
           </motion.h3>
           
           <motion.div 
@@ -389,7 +388,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <h2>Ready to Start Your Project?</h2>
-            <p>Let's discuss how our expertise can help bring your vision to life.</p>
+            <p>Let&apos;s discuss how I can help bring your vision to life.</p>
             <Link to="/contact" className="cta-button">
               Get in Touch
             </Link>

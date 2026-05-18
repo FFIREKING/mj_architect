@@ -4,27 +4,27 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import './AboutPage.css';
 
-// Company values
+// Practice values
 const values = [
   {
     icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5',
     title: 'Design Excellence',
-    description: 'We pursue design excellence in everything we do, creating spaces that inspire, perform, and endure.'
+    description: 'I pursue design excellence in every project, creating spaces that inspire, perform, and endure.'
   },
   {
     icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75',
-    title: 'Collaboration',
-    description: 'Our strength lies in collaboration—with each other, our clients, and the communities we serve.'
+    title: 'Client Partnership',
+    description: 'My strength lies in close collaboration with clients, consultants, and communities.'
   },
   {
     icon: 'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z',
     title: 'Sustainability',
-    description: 'We design for a sustainable future, minimizing environmental impact while maximizing human well-being.'
+    description: 'I design for a sustainable future, minimizing environmental impact while maximizing human well-being.'
   },
   {
     icon: 'M13 2L3 14h9l-1 8 10-12h-9l1-8z',
     title: 'Innovation',
-    description: 'We embrace innovation, constantly exploring new ideas, technologies, and approaches to design.'
+    description: 'I embrace innovation, exploring new ideas, technologies, and design methods that add real value.'
   }
 ];
 
@@ -32,33 +32,33 @@ const values = [
 const timeline = [
   {
     year: '2012',
-    title: 'Founded',
-    description: 'Our firm was established with a vision to transform how architecture impacts communities.'
-  },
-  {
-    year: '2002',
-    title: 'First International Project',
-    description: 'Expanded our reach globally with our first international commission in Europe.'
-  },
-  {
-    year: '2010',
-    title: 'Sustainability Commitment',
-    description: 'Launched our sustainability initiative, committing to carbon-neutral design by 2030.'
+    title: 'Practice Founded',
+    description: 'I launched my independent practice with a focus on thoughtful, people-centered architecture.'
   },
   {
     year: '2015',
-    title: '1000th Project',
-    description: 'Celebrated the completion of our 1000th project across multiple continents.'
+    title: 'Project Portfolio Growth',
+    description: 'Expanded into larger mixed-use and commercial assignments with multidisciplinary coordination.'
   },
   {
-    year: '2020',
-    title: 'Global Expansion',
-    description: 'Opened new offices in Asia and the Middle East, expanding our global presence.'
+    year: '2018',
+    title: 'Sustainability Focus',
+    description: 'Introduced a stronger sustainability framework into concept development and technical design.'
   },
   {
-    year: '2025',
-    title: 'Design for Tomorrow',
-    description: 'Continuing to innovate with AI-driven design and regenerative architecture.'
+    year: '2021',
+    title: 'Integrated Delivery',
+    description: 'Refined the workflow connecting design direction, technical documentation, and stakeholder communication.'
+  },
+  {
+    year: '2024',
+    title: 'MJ Architect Brand',
+    description: 'Repositioned as MJ Architect, a principal-led studio built around clarity and quality.'
+  },
+  {
+    year: '2026',
+    title: 'Future-Ready Platform',
+    description: 'Built a stronger digital foundation for long-term growth and future collaborators.'
   }
 ];
 
@@ -74,10 +74,10 @@ const awards = [
 
 // Stats
 const stats = [
-  { number: '15+', label: 'Years of Excellence' },
+  { number: '14+', label: 'Years in Practice' },
   { number: '100+', label: 'Projects Completed' },
-  { number: '45', label: 'Team Members' },
-  { number: '10+', label: 'Countries' }
+  { number: '1', label: 'Principal Lead' },
+  { number: '10+', label: 'Partner Disciplines' }
 ];
 
 export default function AboutPage() {
@@ -107,7 +107,7 @@ export default function AboutPage() {
       <PageHero 
         title="About Matthew Johnson"
         subtitle="A principal-led architecture practice focused on clarity, quality, and long-term value."
-        backgroundImage="/images/gensler-office.jpg"
+        backgroundImage="/images/masters-scale.jpg"
       />
 
       {/* Stats Bar */}
@@ -131,7 +131,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Story */}
       <section className="about-story" ref={storyRef}>
         <div className="container">
           <div className="story-grid">
@@ -141,22 +141,19 @@ export default function AboutPage() {
               animate={isStoryInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <span className="section-label">Our Story</span>
-              <h2>Designing Change for People, Places, and the Planet</h2>
+              <span className="section-label">My Story</span>
+              <h2>Designing Better Outcomes Through Clear Architecture</h2>
               <p className="lead">
-                For over three decades, we have been at the forefront of architectural innovation, 
-                creating spaces that transform how people live, work, and connect.
+                MJ Architect is built around direct principal involvement from concept to completion.
               </p>
               <p>
-                Founded on the belief that design has the power to change the world, our firm has 
-                grown from a small studio to a global practice with offices across five continents. 
-                We bring together architects, designers, planners, and strategists who share a 
-                passion for creating meaningful, sustainable, and beautiful spaces.
+                I work closely with clients to define project goals, align technical constraints,
+                and maintain design integrity throughout delivery. The focus is always on creating
+                spaces that are meaningful, buildable, and enduring.
               </p>
               <p>
-                Our approach is rooted in research, collaboration, and a deep understanding of 
-                human needs. We work closely with our clients to understand their vision and 
-                translate it into design solutions that exceed expectations and stand the test of time.
+                My approach combines research, collaboration, and practical execution.
+                Each project balances design quality, performance, and long-term value.
               </p>
             </motion.div>
             <motion.div 
@@ -167,14 +164,14 @@ export default function AboutPage() {
             >
               <img 
                 src="/images/gensler-office.jpg"
-                alt="Our office" 
+                alt="Matthew Johnson studio"
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Our Values */}
+      {/* Values */}
       <section className="about-values" ref={valuesRef}>
         <div className="container">
           <motion.div 
@@ -183,9 +180,9 @@ export default function AboutPage() {
             animate={isValuesInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-label">Our Values</span>
-            <h2>What Drives Us</h2>
-            <p>These core values guide everything we do and shape how we approach every project.</p>
+            <span className="section-label">Values</span>
+            <h2>What Drives My Work</h2>
+            <p>These principles shape every project from early strategy to final delivery.</p>
           </motion.div>
 
           <motion.div 
@@ -224,8 +221,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-label">Our Journey</span>
-            <h2>Milestones That Define Us</h2>
+            <span className="section-label">Journey</span>
+            <h2>Milestones That Shaped My Practice</h2>
           </motion.div>
 
           <div className="timeline">
@@ -297,7 +294,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h2>Let's Create Something Extraordinary</h2>
-            <p>Ready to start your next project? We'd love to hear from you.</p>
+            <p>Ready to start your next project? I&apos;d love to hear from you.</p>
             <Link to="/contact" className="cta-button">
               Get in Touch
             </Link>

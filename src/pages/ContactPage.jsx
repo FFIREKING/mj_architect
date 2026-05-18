@@ -32,18 +32,18 @@ const inquiryTypes = [
 const contactReasons = [
   {
     icon: 'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6z',
-    title: 'Visit Our Offices',
-    description: 'Stop by any of our global offices to meet our team in person.'
+    title: 'Plan a Meeting',
+    description: 'Schedule a studio or site meeting to discuss your project goals.'
   },
   {
     icon: 'M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z',
     title: 'Send a Message',
-    description: 'Use our contact form and we\'ll respond within 24 hours.'
+    description: 'Use the form and I&apos;ll respond with next steps for your project.'
   },
   {
     icon: 'M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z',
-    title: 'Call Us',
-    description: 'Speak directly with our team about your project needs.'
+    title: 'Call Directly',
+    description: 'Speak with Matthew Johnson directly about scope, timeline, and priorities.'
   }
 ];
 
@@ -96,9 +96,9 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <PageHero 
-        title="Contact Us"
-        subtitle="Let's discuss how we can bring your vision to life"
-        backgroundImage="/images/gensler-office.jpg"
+        title="Contact Matthew Johnson"
+        subtitle="Let&apos;s discuss how to bring your vision to life with a clear and focused design process."
+        backgroundImage="/images/events.jpg"
       />
 
       {/* Contact Reasons */}
@@ -143,8 +143,8 @@ export default function ContactPage() {
             >
               <div className="form-header">
                 <span className="section-label">Get in Touch</span>
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                <h2>Send a Message</h2>
+                <p>Fill out the form below and I&apos;ll get back to you as soon as possible.</p>
               </div>
 
               {isSubmitted ? (
@@ -161,7 +161,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3>Thank You!</h3>
-                  <p>Your message has been sent successfully. We'll be in touch soon.</p>
+                  <p>Your message has been sent successfully. I&apos;ll be in touch soon.</p>
                   <button 
                     className="reset-btn"
                     onClick={() => {
@@ -288,29 +288,26 @@ export default function ContactPage() {
               <div className="info-card">
                 <h3>General Inquiries</h3>
                 <p className="info-text">
-                  Use the contact form to reach us with general questions about our services and projects.
+                  Use the form to ask questions about services, project fit, or availability.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>New Business</h3>
+                <h3>New Projects</h3>
                 <p className="info-text">
-                  Share details about your upcoming project through the form and our team will follow up.
+                  Share a short project brief and I&apos;ll follow up with next-step recommendations.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Careers</h3>
+                <h3>Collaborations</h3>
                 <p className="info-text">
-                  Explore open roles and submit your application directly through our careers page.
+                  For consultant partnerships or design collaborations, reach out through this page.
                 </p>
-                <Link to="/careers" className="careers-link">
-                  View Open Positions →
-                </Link>
               </div>
 
               <div className="info-card">
-                <h3>Follow Us</h3>
+                <h3>Follow MJ Architect</h3>
                 <div className="social-links">
                   <a
                     href={siteConfig.social.linkedin}
@@ -362,9 +359,9 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-label">Our Offices</span>
-            <h2>Global Presence</h2>
-            <p>With offices around the world, we're always close to your project.</p>
+            <span className="section-label">Office</span>
+            <h2>Practice Location</h2>
+            <p>Available for in-person meetings in New York and remote sessions worldwide.</p>
           </motion.div>
 
           {/* Office Tabs */}

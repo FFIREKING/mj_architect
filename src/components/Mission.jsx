@@ -6,7 +6,7 @@ export default function Mission() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  const words = "Building Tomorrow's World Through Architectural Excellence".split(' ');
+  const words = "Matthew Johnson Designing Spaces With Clarity".split(' ');
 
   return (
     <section className="mission" ref={ref}>
@@ -47,7 +47,7 @@ export default function Mission() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          We are a U.S.-based architecture firm delivering residential and commercial projects—from multi-family and mixed-use to workplace and hospitality. Our culture is collaborative and detail-driven, pairing design excellence with technical rigor to move projects from concept through delivery.
+          I lead MJ Architect as a principal-led practice delivering residential and commercial projects with design clarity, technical rigor, and direct communication from concept through completion.
         </motion.p>
       </div>
     </section>

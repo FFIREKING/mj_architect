@@ -1,8 +1,8 @@
 /* Footer Section */
 .footer {
-  background: var(--color-gray-900);
+  background: #12100f;
   color: var(--color-white);
-  padding: 80px 0 40px;
+  padding: 96px 0 44px;
   font-family: var(--font-sans);
 }
 
@@ -27,12 +27,13 @@
 }
 
 .footer-logo-text {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--color-red);
-  letter-spacing: 0.06em;
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: opacity 0.3s ease;
+  line-height: 0.95;
 }
 
 .footer-logo:hover .footer-logo-text {
@@ -40,10 +41,12 @@
 }
 
 .footer-tagline {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-  max-width: 280px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.85;
+  max-width: 320px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Links Grid */
@@ -54,10 +57,10 @@
 }
 
 .footer-column-title {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 11px;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15em;
   color: var(--color-white);
   margin-bottom: 20px;
 }
@@ -69,9 +72,11 @@
 }
 
 .footer-column-links a {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.66);
   transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .footer-column-links a:hover {
@@ -96,7 +101,7 @@
 .contact-item svg {
   flex-shrink: 0;
   opacity: 1;
-  color: var(--color-red);
+  color: #d4b083;
   margin-top: 2px;
 }
 
@@ -129,9 +134,9 @@
   align-items: center;
   gap: 10px;
   padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.86);
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.92);
+  background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 12px;
@@ -142,7 +147,7 @@
 
 .footer-back-to-top:hover {
   color: var(--color-white);
-  border-color: rgba(200, 16, 46, 0.6);
+  border-color: #d4b083;
   transform: translateY(-1px);
 }
 
@@ -163,7 +168,7 @@
 
 .office-item svg {
   flex-shrink: 0;
-  color: var(--color-red);
+  color: #d4b083;
   margin-top: 2px;
 }
 
@@ -209,15 +214,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.24);
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: var(--color-red);
-  color: var(--color-white);
+  background: transparent;
+  border-color: #d4b083;
+  color: #d4b083;
 }
 
 .social-link svg {

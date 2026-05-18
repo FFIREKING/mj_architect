@@ -27,10 +27,10 @@ export default function ProjectsPage() {
 
   return (
     <div className="projects-page">
-      <PageHero 
-        title={null}
-        subtitle={null}
-        backgroundImage="/images/hero-bg.jpg"
+      <PageHero
+        title="Projects"
+        subtitle="Selected work from residential, commercial, and mixed-use architecture."
+        backgroundImage="/images/spotlight.jpg"
       />
 
       {/* Projects Grid */}

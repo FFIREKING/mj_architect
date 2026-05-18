@@ -3,11 +3,6 @@
   background: var(--color-white);
 }
 
-/* Projects PageHero: remove overlay on this page */
-.projects-page .page-hero-overlay {
-  display: none;
-}
-
 /* Filters */
 .projects-filters {
   padding: 40px 0;

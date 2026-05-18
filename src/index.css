@@ -4,21 +4,21 @@
    ============================================ */
 
 :root {
-  --color-black: #000000;
+  --color-black: #0f1014;
   --color-white: #ffffff;
-  --color-gray-50: #fafafa;
-  --color-gray-100: #f5f5f5;
-  --color-gray-200: #eeeeee;
-  --color-gray-300: #d4d4d4;
-  --color-gray-400: #a3a3a3;
-  --color-gray-500: #737373;
-  --color-gray-600: #525252;
-  --color-gray-700: #404040;
-  --color-gray-800: #262626;
-  --color-gray-900: #171717;
-  --color-red: #c8102e;
-  --color-red-dark: #a00d24;
-  --color-red-light: #e8435a;
+  --color-gray-50: #faf9f7;
+  --color-gray-100: #f3f1ed;
+  --color-gray-200: #e5e2db;
+  --color-gray-300: #d2cdc4;
+  --color-gray-400: #a9a297;
+  --color-gray-500: #777064;
+  --color-gray-600: #5f584e;
+  --color-gray-700: #3a362f;
+  --color-gray-800: #201d19;
+  --color-gray-900: #14110f;
+  --color-red: #b38a5a;
+  --color-red-dark: #8b6a42;
+  --color-red-light: #d0af86;
 
   /* Alias used across components */
   --color-primary: var(--color-red);
@@ -26,14 +26,14 @@
   
   /* Modern professional font stack */
   --font-sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-serif: var(--font-sans);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
 
   /* Alias used across components */
   --font-body: var(--font-sans);
-  --font-heading: var(--font-sans);
+  --font-heading: var(--font-serif);
   
-  --header-height: 60px;
-  --header-height-scrolled: 52px;
+  --header-height: 74px;
+  --header-height-scrolled: 66px;
   --container-width: 1440px;
   --section-padding: 80px;
 
@@ -61,8 +61,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.65;
   color: var(--color-gray-800);
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
