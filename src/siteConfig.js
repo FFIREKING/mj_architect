@@ -12,15 +12,9 @@ export const siteConfig = {
     offices: [
       {
         title: 'Primary Office',
-        address: 'Gilbert, AZ 85234',
-        city: 'Gilbert',
+        address: '4380 E Park Ave',
+        city: 'Gilbert, AZ 85234',
       },
     ],
-  },
-  social: {
-    linkedin: 'https://www.linkedin.com',
-    instagram: 'https://www.instagram.com',
-    x: 'https://x.com',
-    facebook: 'https://www.facebook.com',
   },
 };
