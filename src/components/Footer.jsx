@@ -70,6 +70,15 @@ export default function Footer() {
             <div className="footer-column footer-contact">
               <h4 className="footer-column-title">Contact</h4>
               <div className="contact-info">
+                <div className="contact-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  <div className="contact-text">
+                    <span className="contact-label">Email</span>
+                    <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>
+                  </div>
+                </div>
                 {siteConfig.contact.phones.map((phone, index) => (
                   <div key={index} className="contact-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

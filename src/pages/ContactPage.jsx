@@ -8,13 +8,14 @@ import './ContactPage.css';
 // Office locations
 const offices = [
   {
-    city: 'New York',
-    address: '1330 6th Ave',
-    location: 'New York, NY 10019',
-    phone: '914 515 6445',
+    city: 'Gilbert',
+    address: 'Gilbert, AZ',
+    location: 'Gilbert, AZ 85234',
+    phone: siteConfig.contact.phones[0],
+    email: siteConfig.contact.email,
     image: '/images/gensler-office.jpg',
     mapUrl:
-      'https://www.google.com/maps?q=1330%206th%20Ave%2C%20New%20York%2C%20NY%2010019&output=embed',
+      'https://www.google.com/maps?q=Gilbert%2C%20AZ%2085234&output=embed',
   },
 ];
 
@@ -361,7 +362,7 @@ export default function ContactPage() {
           >
             <span className="section-label">Office</span>
             <h2>Practice Location</h2>
-            <p>Available for in-person meetings in New York and remote sessions worldwide.</p>
+            <p>Available for in-person meetings in Gilbert, Arizona and remote sessions worldwide.</p>
           </motion.div>
 
           {/* Office Tabs */}
@@ -406,6 +407,12 @@ export default function ContactPage() {
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                   </svg>
                   <a href={`tel:${sanitizeTel(offices[activeOffice].phone)}`}>{offices[activeOffice].phone}</a>
+                </div>
+                <div className="info-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+                  </svg>
+                  <a href={`mailto:${offices[activeOffice].email}`}>{offices[activeOffice].email}</a>
                 </div>
               </div>
               <div className="office-map">

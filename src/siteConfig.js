@@ -7,13 +7,13 @@ export const siteConfig = {
     tagline: 'Principal-led architecture and planning for high-performance spaces.',
   },
   contact: {
-    email: '<EMAIL_PLACEHOLDER>',
-    phones: ['<PHONE_PLACEHOLDER>'],
+    email: 'mj.architect3@gmail.com',
+    phones: ['(520) 837-1110'],
     offices: [
       {
         title: 'Primary Office',
-        address: 'New York Metro Area',
-        city: 'By appointment',
+        address: 'Gilbert, AZ 85234',
+        city: 'Gilbert',
       },
     ],
   },
