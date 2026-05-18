@@ -1,21 +1,9 @@
-# Render Blueprint — SPA (React Router) needs all routes to serve index.html
-# If you created the site manually in the dashboard, also add:
-#   Redirects/Rewrites → Source: /* → Destination: /index.html → Action: Rewrite
+# Node Web Service — reliable SPA routing (no dashboard rewrite rules needed)
 services:
   - type: web
     name: mj-architect
-    runtime: static
+    runtime: node
+    plan: free
     buildCommand: npm ci && npm run build
-    staticPublishPath: dist
-    pullRequestPreviewsEnabled: true
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    headers:
-      - path: /*
-        name: X-Frame-Options
-        value: DENY
-      - path: /*
-        name: X-Content-Type-Options
-        value: nosniff
+    startCommand: npm start
+    healthCheckPath: /
