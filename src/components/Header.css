@@ -1,4 +1,4 @@
-/* Refined editorial header inspired by mjarchitects.in */
+/* Editorial header — transparent over heroes, warm solid bar on scroll */
 .header {
   position: fixed;
   top: 0;
@@ -6,16 +6,44 @@
   right: 0;
   height: var(--header-height);
   z-index: 1000;
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.52), rgba(10, 10, 10, 0.14));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px);
-  transition: background 0.25s ease, border-color 0.25s ease, height 0.25s ease;
+
+  --header-bg: transparent;
+  --header-border: transparent;
+  --header-shadow: none;
+  --header-link: rgba(255, 255, 255, 0.88);
+  --header-link-hover: #ffffff;
+  --header-link-active: #ffffff;
+  --header-underline: rgba(255, 255, 255, 0.92);
+  --header-logo-filter: brightness(0) invert(1);
+  --header-icon: rgba(255, 255, 255, 0.92);
+
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: var(--header-shadow);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition:
+    background 0.35s var(--ease-out-quart),
+    border-color 0.35s var(--ease-out-quart),
+    box-shadow 0.35s var(--ease-out-quart),
+    height 0.25s ease;
 }
 
 .header.scrolled {
   height: var(--header-height-scrolled);
-  background: rgba(12, 12, 12, 0.88);
-  border-bottom-color: rgba(255, 255, 255, 0.14);
+
+  --header-bg: rgba(250, 249, 247, 0.97);
+  --header-border: rgba(32, 29, 25, 0.08);
+  --header-shadow: 0 10px 36px rgba(20, 17, 15, 0.07);
+  --header-link: var(--color-gray-600);
+  --header-link-hover: var(--color-gray-900);
+  --header-link-active: var(--color-gray-900);
+  --header-underline: var(--color-red);
+  --header-logo-filter: none;
+  --header-icon: var(--color-gray-800);
+
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
 }
 
 .header-container {
@@ -36,10 +64,11 @@
 }
 
 .logo-img {
-  height: 36px;
+  height: 34px;
   width: auto;
   object-fit: contain;
-  filter: brightness(1.02);
+  filter: var(--header-logo-filter);
+  transition: filter 0.35s var(--ease-out-quart);
 }
 
 .main-nav {
@@ -48,33 +77,33 @@
 
 .nav-list {
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 .nav-link {
   font-size: 11px;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--header-link);
   padding: 8px 0;
   position: relative;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .nav-link.active,
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--header-link-hover);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -4px;
   width: 100%;
   height: 1px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--header-underline);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s ease;
@@ -90,11 +119,12 @@
 }
 
 .menu-toggle {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--header-icon);
   display: none;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  transition: color 0.25s ease;
 }
 
 .header-icon {
@@ -105,8 +135,8 @@
 .mobile-menu-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(3px);
+  background: rgba(20, 17, 15, 0.42);
+  backdrop-filter: blur(4px);
   z-index: 1400;
 }
 
@@ -116,9 +146,9 @@
   right: 0;
   width: min(86vw, 360px);
   height: 100vh;
-  background: #141312;
+  background: var(--color-gray-50);
   z-index: 1500;
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.4);
+  box-shadow: -16px 0 48px rgba(20, 17, 15, 0.12);
 }
 
 .mobile-menu-content {
@@ -132,9 +162,14 @@
   font-family: var(--font-heading);
   font-size: 30px;
   line-height: 1.2;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-gray-800);
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid var(--color-gray-200);
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-red);
 }
 
 @media (max-width: 960px) {
@@ -151,4 +186,3 @@
     padding: 0 18px;
   }
 }
-
